@@ -1,0 +1,118 @@
+Q) What is a dictionary?
+A) A dictionary in python is a data structure that stores the value in key:value pairs.
+
+
+Q) How to add an elements in dictionary? What are its adding methods?
+
+A) Method 1 using ',' ex:-
+  
+   programming = {"bug" : "functionality failure" , "function" : "def"}
+   print(programming)
+
+   o/p : {'bug' : 'functionality failure' , 'function' : 'def'}
+
+
+
+
+  Method 2 using 'another line of code' ex:-
+
+  programming = {"bug" : "functionality failure" , "function" : "def"}
+  programming ["print"] = "output" 
+  print(programming)
+
+  o/p : {'bug' : 'functionality failure' , 'function' : 'def' , 'print' : 'output'}
+
+
+
+
+
+ 
+  Method 3 using .update() method ex:-
+
+  programming = {"bug" : "functionality failure" , "function" : "def"}
+  programming ["print"] = "output" 
+  programming.update({"input" : "read"})
+ print(programming)
+
+  o/p : {'bug' : 'functionality failure' , 'function' : 'def' , 'print' : 'output' , 'input' : 'read'}
+
+
+
+--------------------------------------------------------------
+
+Q) What is the method used if we want to print only keys, print only values, print only key-value pairs ?
+
+A) ---> Print only keys :-
+
+      programming = {"bug" : "functionality failure" , "function" : "def"}
+      for key in programming.keys():
+	 print(key)
+
+      o/p : bug
+            function
+
+
+
+  ---> Print only values :-
+
+       programming = {"bug" : "functionality failure" , "function" : "def"}
+       for value in programming.values():
+	 print(value)
+
+       o/p :  functionality failure
+              def
+
+
+
+
+ ---> Print only key-value pairs :-
+     
+       programming = {"bug" : "functionality failure" , "function" : "def"}
+       for key,value in programming.items():
+	  print(key,value)
+
+       o/p : bug       functionality failure
+             function  def
+
+
+
+
+------------------------------------------------------------------
+
+Q)What is Tuple ?
+
+A) Tuples are Immutable data structures.
+
+   Ex: tup = (1,2,3,4)
+       print(tup)
+
+       o/p : (1,2,3,4)
+
+
+
+
+  Tuples have indexing,
+  Ex: tup = (1,2,3,4)
+      print(tup[0])
+
+      o/p : 1
+
+
+
+
+
+Ex: tup = (1,2,3,4)
+    tup[0] = 8
+    print(tup[0])
+
+    o/p : Error : 'tuple' object does not support item assignment
+
+
+* We cannot add any item or delete any item from tuples.
+
+* Tuples are mostly used when we not allow a file to be accessed in a project.
+  When multiple people try to access the same file at the same time, deadlock situation occurs.
+  So, during deadlock situations we use Tuples.
+  That is the reason behind Immutable data structures.
+
+
